@@ -58,7 +58,24 @@ class SolitaryConfinement {
             deck: this.deck,
             top: this.deck[0],
             foundations: this.foundations,
-            maneuvers: this.maneuvers
+            maneuvers: this.maneuvers,
+            moves: this.getMovesAvailable(),
+            won: this.checkGameWon()
+        }
+    }
+
+    /*
+     * simple getter that returns all the information that the player would know, assuming perfect memory
+     */
+
+    getInfo(){
+        return {
+            stage: this.stage,
+            top: this.deck[0],
+            foundations: this.foundations,
+            maneuvers: this.maneuvers,
+            moves: this.getMovesAvailable(),
+            won: this.checkGameWon()
         }
     }
 
@@ -66,21 +83,43 @@ class SolitaryConfinement {
      * terribly unoptimized code that checks if there are any valid moves left
      */
 
-    checkCanMove(){
+    getMovesAvailable(){
         let moves = 0
-        for (let i = 0; i < 8; i++){
+        for (let i = 0; i < this.maneuvers.size; i++){
             if (this.maneuvers[i].size === 0){
                 continue
             }
             let card = this.maneuvers[i][0]
-            for (let j = 0; j < 4; j++){
+            for (let j = 0; j < this.foundations.size; j++){
                 if (this.checkSequence(card, j)){
                     moves++
                 }
             }
         }
-        return moves > 0
+        return moves
     }
+
+    /* 
+     * of course this is needed!
+     */
+
+    checkGameWon(){
+        // slightly jank, but probably the easiest way
+        let sum = 0
+        for (let i = 0; i < this.foundations.size; i++){
+            sum += this.foundations[i].number
+        }
+        return sum === this.foundations.size * 13
+    }
+
+    /* 
+     * basically just wraps getMovesAvailable
+     */
+
+    checkCanMove(){
+        return this.getMovesAvailable > 0
+    }
+
 
     /*
      * @param {Card} card: a card object representing what the player is trying to place - has suit, display, and number
