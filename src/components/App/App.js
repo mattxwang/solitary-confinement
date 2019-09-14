@@ -10,7 +10,7 @@ function App() {
   return (
     <div>
       <Navbar bg="dark" variant="dark">
-        <Navbar.Brand href="#"><span role="img" aria-label="a playing card">🃏</span>Solitary Confinement</Navbar.Brand>
+        <Navbar.Brand href={githubLink}><span role="img" aria-label="a playing card">🃏</span>Solitary Confinement</Navbar.Brand>
         <Nav className="ml-auto">
           <Nav.Link href={githubLink} target="_blank" rel="noopener noreferrer">Source Code</Nav.Link>
         </Nav>
