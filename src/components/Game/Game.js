@@ -182,9 +182,9 @@ class Game extends Component {
 		return (
             <Container className="game-container" fluid>
                 <Row>
-                    <Col md={4}>
-                        <Card nomargin card={this.state.deck[0]}/>
-                        <hr />
+                    <Col className="text-center text-md-left" md={4}>
+                        <Card className="mx-auto mx-md-0" card={this.state.deck[0]}/>
+                        <br />
                         <ul className="list-unstyled mt-1">
                             <li>stage: {this.state.stage}</li>
                             <li>cards left in deck: {this.state.deck.length}</li>
@@ -198,7 +198,7 @@ class Game extends Component {
                             {
                                 [0,1,2,3].map((value) => {
                                     return (
-                                        <Col key={value}>
+                                        <Col className="my-2 mt-md-0" key={value} xs={6} md={3}>
                                             <Card 
                                                 card={this.state.foundations[value][0]} 
                                                 num={value} 
@@ -208,12 +208,12 @@ class Game extends Component {
                                 })
                             }
                         </Row>
-                        <hr />
+                        <hr className="divider" />
                         <Row className="my-2">
                             {
                                 [0,1,2,3].map((value) => {
                                     return (
-                                        <Col key={value}>
+                                        <Col className="my-2 mt-md-0" key={value} xs={6} md={3}>
                                             <Card 
                                                 card={this.state.maneuvers[value][0]} 
                                                 num={value} 
@@ -227,7 +227,7 @@ class Game extends Component {
                             {
                                 [4,5,6,7].map((value) => {
                                     return (
-                                        <Col key={value}>
+                                        <Col className="my-2 mt-md-0" key={value} xs={6} md={3}>
                                             <Card 
                                                 card={this.state.maneuvers[value][0]} 
                                                 num={value} 
