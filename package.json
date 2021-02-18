@@ -2,7 +2,7 @@
   "name": "solitary-confinement",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://malsf21.github.io/solitary-confinement",
+  "homepage": "https://mattxwang.github.io/solitary-confinement",
   "dependencies": {
     "bootstrap": "^4.3.1",
     "gh-pages": "^2.1.1",
