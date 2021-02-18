@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "14eed6b91cef32fa448f58b8d1779f1e",
+    "revision": "a4b9fde9d5990e6c619bb2c080a9fc9c",
     "url": "/solitary-confinement/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/solitary-confinement/static/css/2.22a7d4ef.chunk.css"
   },
   {
-    "revision": "711ec4307bba69dfbdfc",
+    "revision": "a3860b5970ddea7483f0",
     "url": "/solitary-confinement/static/css/main.5db93657.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/solitary-confinement/static/js/2.67038e0f.chunk.js"
   },
   {
-    "revision": "711ec4307bba69dfbdfc",
-    "url": "/solitary-confinement/static/js/main.fab209a0.chunk.js"
+    "revision": "a3860b5970ddea7483f0",
+    "url": "/solitary-confinement/static/js/main.68d2b2d2.chunk.js"
   },
   {
     "revision": "434a401c710f86237769",
